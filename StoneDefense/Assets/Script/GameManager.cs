@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int playerPoints = 100; // 초기 포인트
-    public Text pointText;
+    public TextMeshProUGUI pointText;
 
     void Awake()
     {
@@ -38,6 +39,6 @@ public class GameManager : MonoBehaviour
     void UpdateUI()
     {
         if (pointText != null)
-            pointText.text = "Points: " + playerPoints;
+            pointText.text = ""+playerPoints;
     }
 }
